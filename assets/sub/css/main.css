@@ -1,0 +1,264 @@
+<style type="text/css">
+    @media print {
+    body * {
+      visibility: hidden;
+    }
+    nav{
+      display: none;
+    }
+    footer{
+      display: none;
+    }
+    .dataTables_length{
+      display: none;
+    }
+    .dataTables_filter{
+      display: none;
+    }
+    .dataTables_info{
+      display: none;
+    }
+    .dataTables_paginate{
+      display: none;
+    }
+    .cd-none{
+      display: none;
+    }
+    #printInvoice, #printInvoice * {
+      visibility: visible;
+    }
+    #printInvoice {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    #printPembelian, #printPembelian * {
+      visibility: visible;
+    }
+    #printPembelian {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+    @media only screen and (max-width: 991px) {
+      .navbar-bottom{
+        height: auto;
+      }
+      .nav-bottom{
+        height:50px;
+      }
+      div.dataTables_wrapper div.dataTables_length select {
+          width: 308px;
+          display: inline-block;
+          margin-left: 12px;
+      }
+      div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+          padding-left: 0;
+          padding-right: 0;
+      }
+      div.dataTables_wrapper div.dataTables_filter input {
+          margin-left: 0.5em;
+          display: inline-block;
+          width: 350px;
+      }
+      div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+          padding-right: 0;
+          padding-left: 0;
+      }
+      .lbl-grp{
+        text-align: left;
+      }
+      
+    }
+    @media only screen and (min-width: 992px) {
+      .cd-top-left{
+        min-height: 396px;
+      }
+      .cd-top-right{
+        min-height: 816px;
+      }
+      .cd-pr-lf{
+        min-height: 652px;
+      }
+      .cd-pr-rg{
+        min-height: 252px;
+      }
+      .lbl-grp{
+        text-align: right;
+      }
+      div.dataTables_wrapper div.dataTables_filter input {
+        width: 372px;
+       }
+    }
+    .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+    }
+
+    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: white;
+    }
+
+    .form-control::-ms-input-placeholder { /* Microsoft Edge */
+                color: white;
+     }
+     #search-bar-border {
+        opacity: .5;  
+    }
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      color: #07a288;
+    }
+
+    .hover-underline-animation:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #07a288;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .badge-status{
+      width:  100px;
+      height: 30px;
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+    }
+    html, body {
+       margin:0;
+       padding:0;
+       height:100%;
+    }
+    #wrapper {
+      position:relative;
+      min-height: 100%;
+    }
+    .page-item.active .page-link {
+      z-index: 1;
+      color: #fff;
+      background-color: #07a288;
+      border-color: #07a288;
+    }
+    .custom-file-input:lang(en)~.custom-file-label::after {
+        content: "Browse";
+        color: #fff;
+        background-color: #07a288;
+        border-color: #07a288;
+    }
+    .page-link {
+      position: relative;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: #07a288;
+      background-color: #fff;
+      border: 1px solid #dddfeb;
+      -webkit-box-shadow: 0 .125rem .25rem 0 rgba(58,59,69,.2)!important;
+      box-shadow: 0 .125rem .25rem 0 rgba(58,59,69,.2)!important;
+    }
+    .filter-src{
+      margin: 4.5px;
+    }
+    .btn-ops{
+      margin-bottom: 15px;
+      margin-left: 5px;
+      padding: 0px;
+    }
+    .alert-notif {
+      width: 450px;
+    }
+    .img-profile {
+        border: 1px solid #fafafa;
+    }
+    .img-circle {
+        border-radius: 50%!important;
+    }
+    a:hover {
+        color: #07a288;
+        text-decoration: underline;
+    }
+    .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #07a288;
+    }
+    div.dataTables_wrapper div.dataTables_filter input {
+        border-color: #07a288;
+    }
+    div.dataTables_wrapper div.dataTables_length select {
+        border-color: #07a288;
+    }
+    .frm-brd::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #c1c1c1;
+      opacity: 1; /* Firefox */
+    }
+
+    .frm-brd:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #c1c1c1;
+    }
+
+    .frm-brd::-ms-input-placeholder { /* Microsoft Edge */
+      color: #c1c1c1;
+    }
+    .frm-brd{
+      border-color: #c8d1cf;
+    }
+    .frm-brd:focus {
+      border: 1px solid #07a288;
+    }
+    h5{
+        padding: 0px;
+        margin: 0px;
+    }
+    .text-primary {
+        color: #07a288!important;
+    }
+    .btn-primary {
+      color: #fff;
+      background-color: #07a288;
+      border-color: #07a288;
+    }
+    .bg-primary {
+        background-color: #07a288!important;
+    }
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #07a288;
+        border-color: #07a288;
+    }
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #07a288;
+        border-color: #07a288;
+    }
+    .dropdown-item.active, .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #07a288;
+    }
+    a.text-primary:hover {
+        color: #07a288!important;
+    }
+    dd{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    dt{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+          
+  </style>

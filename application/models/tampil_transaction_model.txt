@@ -1,0 +1,16 @@
+select if(xb.pur_inv<>"",xb.pur_inv, xb.pur_no) AS pur_no,
+xb.pur_date AS pur_date, if(xb.is_fp = 1,xb.no_faktur_pajak, "") AS no_faktur_pajak,
+xb.is_fp AS is_fp, xb.is_fp AS is_fp, xb.is_faktur AS is_faktur, xb.is_receive AS is_received,
+xb.pur_ket AS pur_ket, xb.pur_total_tunai AS pur_total_tunai,
+xc.person_name, xb.pur_no as purno, xb.pur_ord as puror, xb.pur_type,
+round(if(xb.pur_type<2, xx.total_hutang, 0),2) AS pur_total,
+round(if(xb.pur_type=2,  xx.total_hutang *-1,0),2) AS ret_total,
+
+round(if(xb.pur_type<2, (xx.total_retur_kurs-xx.total_bayar_kurs-xx.total_potongan_kurs) *-1,
+  (xx.total_retur_kurs-xx.total_bayar_kurs-xx.total_potongan_kurs)),2) as Bayar,
+round(if(xb.pur_type<2, xx.total_hutang_kurs-xx.total_retur_kurs-xx.total_bayar_kurs-xx.total_potongan_kurs,
+  (xx.total_hutang_kurs-xx.total_retur_kurs-xx.total_bayar_kurs-xx.total_potongan_kurs) * -1),2) as Sisa
+
+from thutang xx left join tpurchase xb on xx.in_no = xb.pur_no
+left join tperson xc on xb.person_no = xc.person_no
+where xb.is_delete = 0 and xb.pur_type < 15

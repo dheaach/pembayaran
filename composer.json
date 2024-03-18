@@ -1,0 +1,9 @@
+{
+    "require": {
+        "kreait/firebase-php": "4.17.0"
+    },
+    "config": {
+        "platform-check": false
+    }
+	
+}
